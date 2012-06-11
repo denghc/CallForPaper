@@ -1,0 +1,1217 @@
+/*
+ * ask
+ */
+.AskRS
+{
+	color:#FF6000;
+	margin-left:20px;
+	border:0px #FF6000 solid;
+}
+.AskCanvasDiv
+{
+	width:100%;
+	margin-right:0px;
+	height:304px;
+	border:1px dotted #FF6000;
+	margin-bottom:5px;
+	text-align:center;
+}
+.AskCanvas
+{
+	border:2px dotted #FF6000;
+	width:350px;
+	height:300px;
+}
+body
+{ 
+  background-image: url(../../static/rrapp/welcomebg.png);
+  background-repeat: repeat;
+}
+#Biggest
+{
+	width:750px;
+	margin:0 auto;
+}
+/*
+Bar css here
+*/
+#BarManager
+{
+	height :62px;
+	position:relative;
+	background: transparent url(../../static/rrapp/title.png);
+	background-repeat: no-repeat;
+	
+}
+#BarImage
+{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:10px;
+	left:5px;
+	background-color:white;
+}
+#BarUpUp
+{
+	margin-left:80px;
+	height:8px;
+}
+#BarUp
+{
+	margin-left:80px;
+	height:25px;
+	
+}
+#BarDown
+{
+	margin-left:80px;
+	height:25px;
+}
+.BarMbuttonDown
+{
+	background-color: gold;
+	width:20px;
+	color: rgb(189,123,24);
+	font-size : small;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	background: transparent;
+	padding-left: 20px;
+	cursor: hand;
+}
+.BarMbuttonUp
+{
+	background-color: yellow;
+	width:80px;
+	color:rgb(240,160,0);
+	font-size : large;
+	background: transparent;
+	font-family: "黑体";
+	padding: 2px;
+	cursor: hand;
+}
+.BarMButBar
+{
+	width:5px;
+}
+#BarTakePlace
+{
+	height:0px;
+}
+/*
+ * canvas
+ */
+#CanvasControl
+{
+	position:fixed;
+	left:3px;
+	height:200px;
+	width:100px;
+/*	top:225px;*/
+	top:100px;
+	border:2px dotted rgb(240,160,0);
+	display:none;
+}
+#CanvasTitle
+{
+	color:#FF6000;
+	text-align:center;
+	width:100%;
+	background-color:#FFE7BA;
+}
+.CanvasColor
+{
+	width:20px;
+	height:20px;
+	border:0px black solid;
+	position:absolute;
+	text-align:center;
+}
+#CanvasColors
+{
+	position:relative;
+	width:100%;
+	height:42px;
+}
+#CanvasColorS
+{
+	width:75px;
+	height:20px;
+}
+#CanvasWidths
+{
+	width:100%;
+	height:22px;
+	position:relative;
+}
+#CanvasWidthS
+{
+	width:75px;
+	height:20px;
+}
+.CanvasClear
+{
+	text-align:center;
+	color:#FF6000;
+}
+/*
+Cat info
+*/
+#CICatNIntro
+{
+	width: 250px;
+}
+
+#CICatIntro
+{
+	word-wrap: break-word;
+	word-break: break-all;
+}
+#CatInfoPanel
+{
+	z-index:10;
+	position:absolute;
+	top:100px;
+	left:0px;
+	width:100%;
+/*	height:100%;*/
+/*	border-top: solid 1px;*/
+	display: none;
+}
+#CICatNName
+{
+	width: 100px;
+	height: 24px;
+
+}
+#CICatViewPanel
+{
+	display:none;
+	background-color: #FFE7BA;
+	border: groove 1px;
+	border-color: #F0A000;
+}
+#CICatViewPContent
+{
+	padding-left: 10px; 
+	margin-left: 65px;
+	border-left: groove 0px;
+}
+#CICatViewPhead
+{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+#CICatViewPimg
+{
+	width:50px;
+	height:50px;
+}
+.CICatViewPback
+{
+	text-align:left;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-top: groove 1px;
+	text-align: right;
+	background-color: #FFE7BA;
+}
+.CatInfoFloat
+{
+	width:350px;
+	margin:0 auto;
+	background-color: #FFE7BA;
+	position:relative;
+}
+#CICatPanel
+{
+	display: none;
+}
+.CICatButton
+{
+/*	width:30px;*/
+/*	margin-left: 35px;*/
+	margin-right: 15px;
+	color:rgb(240,160,0);
+	font-size : large;
+	background: transparent;
+	font-family: "黑体";
+
+}
+#CICatButton:hover
+{
+
+ 	text-decoration: underline;
+	cursor: hand;
+}
+#CICatMapPanel
+{
+	display:none;
+	border: solid 5px;
+	border-color: #f0a000;
+	background-color: #FFE7BA;
+	width: 500px;
+/*	height: 400px;*/
+}
+#CICatMapTitle
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 15px;
+	text-align: center;
+}
+#CICatMapList
+{
+	border-top: groove 1px;
+	margin-top: 2px;
+	width:500px;
+	height:400px;
+	background-color: #FFE7BA;
+}
+/*
+cat data 
+*/
+#CICatDataPanel
+{
+	width:500px;
+}
+.CICatDatas
+{
+	border:dotted 2px;
+	border-color: black;
+	margin: 10px;
+}
+.CICatDataStr
+{
+	color:#FF6000;
+	width:100%;
+	height:50px;
+	margin-bottom:50px;
+	margin-top:50px;
+	text-align:center;
+}
+.CloseButton
+{
+	background-image : url('../../static/rrapp/close_btn.png');
+	background-position: center;
+	position:absolute;
+	right:0px;
+	width: 20px;
+	height: 20px;
+	top:0px;
+	border: solid 1px;
+	border-color: #FFFF00;
+	border-top: 0px;
+	border-bottom:0px;
+	cursor: hand;
+	z-index:1;
+}
+.Content
+{
+	  margin-bottom:-10000px;
+      padding-bottom:10000px;
+      float:left;
+      width: 100%;
+      color: #856632;
+      font-family: "微软雅黑";
+      font-size: small;
+}
+.ContentType1
+{
+	margin-left: 80px;
+}
+.ContentLabel
+{
+	color: rgb(255, 149, 74);
+}
+.ContentLabel
+{
+	color: rgb(255, 159, 84);
+}
+div
+{
+	border:0px solid black;
+}
+.Hold
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color: gray;
+	opacity:0.3;
+	top:0px;
+	display:none;
+}
+#Hold5
+{
+	z-index:5;
+	
+}
+#Hold15
+{
+	z-index:15;
+}
+#Hold25
+{
+	z-index:25;
+}
+#Hold25p
+{
+	position:absolute;
+	top:250px;
+	width:200px;
+	left:50%;
+	margin-left:-100px;
+}
+#Hold25s
+{
+	position:absolute;
+	top:200px;
+	width:200px;
+	left:50%;
+	margin-left:-100px;
+	text-align:center;
+	color:rgb(240,200,100);
+	opacity:1.0;
+}
+/*
+ * input effect here
+ */
+input, textarea
+{
+	font: -webkit-small-control;
+	letter-spacing: normal;
+	word-spacing: normal;
+	line-height: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: -webit -auto;
+/*	height: 24px;*/
+/*	display: block;*/
+	resize: none;
+	outline: 0 none;
+	overflow: auto;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: pre-wrap;
+}
+
+input[type=text]:focus,input[type=password]:focus,textarea:focus
+{
+ transition:border linear .2s,box-shadow linear .5s;
+ -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
+ -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+ outline:none;
+ border-color:#FFA54F;
+ box-shadow:0 0 8px #FFEC8B;
+ -moz-box-shadow:0 0 8px #FFEC8B;
+ height: 50px;
+}
+.InputStyle
+{
+	margin-top: 1px; 
+	margin-bottom:1px; 
+/*	margin-left: 40px;*/
+	text-align: center;
+}
+
+
+/*
+Map css here 
+*/
+#MapPanel
+{
+	z-index:10;
+	position:absolute;
+	top:50px;
+	left:0px;
+	width:100%;
+/*	height:100%;*/
+	display: none;
+	border :solid 0px;
+
+}
+#MapPBody
+{
+	margin:0 auto;
+	width:600px;
+	height:500px;
+	position:relative;
+	border: dotted 2px;
+	border-color: #f0a000;
+	background-color: #FFE7BA;
+}
+#MapNewsList
+{
+	width:590px;
+	height:476px;
+	margin:0 auto;
+	border: solid 1px;
+}
+#MapFilter
+{
+	width:100%;
+	height:24px;
+}
+.ModifyInfoStyle
+{
+	margin-top: 10px; 
+	margin-bottom:10px;
+	font-family: "微软雅黑";
+	color: #F0A000;
+}
+
+
+
+/*
+News css here
+*/
+#NewsPanel
+{
+	width:600px;
+	margin-left:130px;
+}
+.NewsSpan
+{
+	margin:0 auto;
+	font-family:"微软雅黑";
+}
+.NewsBar
+{
+	margin:0 auto;
+	border:1px solid #FFB90F;
+	background-color: #FFEC8B;
+	text-align:center;
+	box-shadow:0 0 2px #FFA54F;
+	cursor: hand;
+	height: 25px;
+}
+#NewsN1
+{
+	margin-top: 2px;
+}
+#NewsN0
+{
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+/*
+New news
+*/
+.NewContentLabel
+{
+	margin-left: 10px;
+	font-family: "微软雅黑"; 
+/*	position: absolute;*/
+}
+#NewNews
+{
+	z-index:10;
+	position:absolute;
+	top:100px;
+	left:0px;
+	width:100%;
+/*	height:100%;*/
+/*	display : none;*/
+/*	border: solid 2px;*/
+}
+#NewsList
+{
+	height:auto;
+	width:auto;
+	display:block;
+	margin-top: 20px;
+}
+.NewNewsFloat
+{
+	width:500px;
+	margin:0 auto;
+	position:relative;
+}
+.NewsInput
+{
+	padding: 5px;
+	text-align: right;
+	vertical-align: top;
+}
+#NewTitle
+{
+	height: 25px;
+	width: 80%;	
+	margin-right:20px;
+}
+/*
+ * new tag
+ */
+#NewTag
+{
+	height: 25px;
+	width: 290px;	
+}
+#NTsubmit
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 80px;
+}
+#NNTagList
+{
+	width:80%;
+	margin-left: 72px;
+	margin-top: 10px;
+	border:#FFA54F 1px solid;
+	text-align:left;
+}
+.NNTagLabel
+{
+	margin:2px;
+	border:#FFA54F 1px solid;
+	background-color:#FFF8D7;
+}
+/*
+New news's cat
+*/
+#NewsCatPanel
+{
+	display: none;
+	background-color: #FFEC8B;
+	font-family: "微软雅黑";
+	font-size: small;
+	opacity: 0.9;
+}
+.NewsCatBody
+{
+	position:relative;
+	height:65px;
+	background-color: #FFEC8B;
+	border-top: groove 1px;
+}
+.NewsCatHead
+{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:10px;
+	left:5px;
+}
+.NewsCatName
+{
+	margin-left:60px;
+	font-size:20px;
+	color:rgb(189,123,24);
+	font-family: "微软雅黑";
+}
+.NewsCatStatus
+{
+	margin-left:60px;
+	margin-right: 20px;
+	position:relative;
+	bottom:0px;
+	font-size: 12px;
+	color:rgb(189,123,24);
+	margin-bottom: 5px;
+}
+.NewsCatSelect
+{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	height: 20px;
+	width: 20px;
+	background-image: url('../../static/rrapp/tick.png');
+	background-position: center;
+	cursor: hand;
+	margin-bottom: 5px;
+}
+#NewsPDTitle
+{
+	font-size: 15px;
+}
+/*
+New news's content
+*/
+#NewPreviewPhoto
+{
+/*	width : 100px; */
+/*	height: 100px;*/
+}
+#NewPreviewPD
+{
+ width: 100%;	
+ text-align: center;
+}
+#NewsContentPanel
+{
+/*	display: none;*/
+	border: dotted 3px;
+	border-color: #f0a000;
+	background-color: #FFF8D7;
+}
+#NewsContent
+{
+	width:80%;
+	height:100px;
+	margin-right:20px;
+}
+#NewsCommit
+{
+/*	position:absolute;*/
+	left:35px;
+	bottom:0px;
+	margin-right: 310px;
+}
+#NewsCtoL
+{
+	text-align:right;
+	position: absolute;
+	right: 35px;
+	bottom: 0px;
+	display: block;
+}
+#NewsPD
+{
+	margin-left: 100px;
+}
+.NewsPublishData
+{
+	height: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*
+New news's location
+*/
+#NewsLocationPanel
+{
+	display: none;
+	background-color: #FFEC8B;
+	width: 480px;
+	border: dotted 2px;
+	border-color: #FFC125;
+}
+#NewsLocationMap
+{
+	border: solid 2px;
+	border-color:#FFC125;
+	width:450px;
+	height:350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#NLname
+{
+	margin-left: 0px;
+	height: 23px;
+/*	text-align: center;*/
+}
+.NLLL
+{
+	text-align: center;
+	margin: 5px auto;
+}
+#NLsubmit
+{
+	margin-top: 1px; 
+	margin-bottom:1px; 
+	margin-left: 20px;
+}
+/*
+ * owner information bar
+ */
+
+.OwnerInfoBar
+{
+	width: 100px;
+	padding-left: 5px;
+	font-size: medium;
+	font-family: "宋体";
+	font-weight:bold;
+	color: #EEB422;
+	position:absolute;
+	text-align:center;
+}
+
+.OwnerHeadImg
+{
+/*	position: absolute;*/
+	height:50px;
+	width:50px;
+/*	background-color:purple;*/
+	margin: 0 auto;
+	margin-bottom:10px;	
+	margin-top:20px;	
+}
+/*
+Panel css here
+*/
+.PanelM
+{
+	margin:0 auto;
+	width:748px;
+	margin-top:5px;
+	border: solid 1px;
+	border-color : #FFC125;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+/*
+Photo css here
+*/
+.PhotoML
+{
+	margin-left:60px;
+}
+.PhotoBody
+{
+	position:relative;
+}
+.PhotoHead
+{
+	background-color:red;
+	position: absolute;
+	top:5px;
+	left:5px;
+}
+.PhotoHeadImg
+{
+	height:50px;
+	width:50px;
+	background-color:green;	
+}
+.PhotoContent
+{
+	height:20px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.PhotoPhoto
+{
+	text-align:center;
+}
+.PhotoImg
+{
+	margin:0 auto;
+	width:200px;
+	height:200px;
+}
+.PhotoControl
+{
+	text-align:left;
+	position: relative;
+}
+.PhotoTrans
+{
+	position:absolute;
+	right:50px;
+}
+.PhotoReply
+{
+	position:absolute;
+	right:0px;
+}
+.PhotoReplyList
+{
+
+}
+.PhotoRBody
+{
+	position:relative;
+}
+.PhotoRHead
+{
+	background-color:red;
+	position: absolute;
+	top:5px;
+	left:5px;
+}
+.PhotoRHeadImg
+{
+	height:50px;
+	width:50px;
+	background-color:green;	
+}
+.PhotoRContent
+{
+	margin-left:60px;
+	height:100px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.PhotoRControl
+{
+	margin-left:60px;
+	text-align:left;
+	position: relative;
+}
+.PhotoRReply
+{
+	position:absolute;
+	right:0px;
+}
+.PhotoRBox
+{
+	display:none;
+}
+.PhotoRBText
+{
+	width:90%;
+	margin:10px 10px 10px 10px;
+}
+.PhotoRBControl
+{
+	text-align:right;
+}
+.PhotoSimg
+{
+/*	text-align: center;*/
+	margin:0 auto;
+/*	width: 508px;*/
+}
+#NNFileimg
+{
+	width:200px;
+	margin:0 auto;
+}
+.ReplyBtn
+{
+	position:relative;
+	color: rgb(255,96,0);
+	font-size: small;
+	font-family: "微软雅黑";
+	margin-right: 15px;
+	cursor: hand;
+}
+.ReplyBtn:hover
+{
+	text-decoration: underline;
+}
+
+
+
+/*
+small div 
+*/
+.SmallBody
+{
+	position:relative;
+	
+}
+.SmallContent
+{
+	margin-left:35px;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	border: dotted 1px;
+	border-color: #FFC125;
+}
+.SmallHead
+{
+	position:absolute;
+	top:2px;
+	left:2px;
+}
+.SmallImg
+{
+	width:30px;
+	height:30px;
+}
+#SmallSPanel
+{
+	position:absolute;
+	width:100%;
+	top:100px;
+	margin: 0 auto;
+	z-index:20;
+	display: none;
+}
+#SmallSbody
+{
+/*	display: none;*/
+	border: dotted 5px;
+	border-color: #FFC125;
+	margin:0 auto;
+	width:600px;
+	background-color: rgba(255, 237, 195,1);
+}
+#SmallSclose
+{
+/*text-align:right;*/
+	position: relative;
+	margin-left: 579px;
+}
+#SmallScontent
+{
+	margin-top:5px;
+	margin: 5px;
+}
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8
+{
+	height:1px; 
+	font-size:1px; 
+	overflow:hidden; 
+	display:block;
+	color: #f0a000;
+	border-color: #f0a000;
+	background-color: #FFE7BA;
+}
+.b1,.b8
+{
+	margin:0 5px;
+	background-color: #f0a000;
+}
+.b2,.b7
+{
+	margin:0 3px;
+	border-right:2px solid;
+	border-left:2px solid;
+}
+.b3,.b6
+{
+	margin:0 2px;
+	border-right:1px solid; 
+	border-left:1px solid;
+}
+.b4,.b5
+{
+	margin:0 1px;
+	border-right:1px solid; 
+	border-left:1px solid; 
+	height:2px;
+} 
+
+/*
+Status css here
+*/
+.Status
+{
+	position: relative;
+	margin-bottom: 20px;
+}
+.StatusML
+{
+	margin-left:70px;
+	margin-right:20px;
+}
+.StatusBody
+{
+	position:relative;
+	background-color:#FFE7BA;
+	border-right:1px solid;
+	border-left:1px solid;
+	overflow:hidden;
+	border-color: #f0a000;
+}
+.StatusHead
+{
+/*	background-color:red;*/
+	position: absolute;
+	top:15px;
+	left:5px;
+}
+.StatusHeadImg
+{
+	height:50px;
+	width:50px;	
+}
+.StatusContent
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow:hidden;
+}
+.StatusControl
+{
+	text-align:left;
+	position: relative;
+}
+.StatusInner
+{
+	text-align: right;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+.StatusName
+{
+	color: rgb(255,96,0);
+	font-family: "微软雅黑";
+/*	width: 55px;*/
+	
+}
+.StatusName:hover
+{
+	cursor: hand;
+	text-decoration: underline;
+}
+.StatusTrans
+{
+	position:relative;
+	color: rgb(255,96,0);
+	font-size: small;
+	font-family: "微软雅黑";
+}
+.StatusTrans:hover
+{
+	text-decoration: underline;
+	cursor: hand;
+}
+.StatusRList
+{
+/*	background-color: white;*/
+	opacity: 0.8;
+	display:none;
+}
+.StatusReply
+{
+	position:relative;
+	padding: 5px;
+	color: rgb(255,96,0);
+	font-size: small;
+	font-family: "微软雅黑";
+}
+.StatusReply:hover
+{
+	text-decoration: underline;
+	cursor: hand;
+}
+.StatusReplyList
+{
+/*	margin-bottom:4px;*/
+}
+.StatusRBody
+{
+	position:relative;
+	border-bottom :solid 1px;
+	border-color: #CDAD00;
+		background-color: rgba(255, 231, 186,0.3);
+	overflow:hidden;
+	min-height: 80px;
+}
+.StatusRBody:hover
+{
+	background-color: rgba(255, 231, 186,0.9);
+}
+.StatusRHead
+{
+	z-index: 0;
+	position: absolute;
+	top:15px;
+	left:10px;
+/*	background-color:green;	*/
+}
+.StatusRHeadImg
+{
+	height:50px;
+	width:50px;
+/*	position: relative;*/
+}
+.StatusRName
+{
+	font-size: 14px;
+	color: rgb(255,96,0);
+	font-family: "微软雅黑";
+	padding-bottom: 5px;
+}
+.StatusRName:hover
+{
+	text-decoration: underline;
+	cursor: hand;
+}
+.StatusRContent
+{
+	margin-left:70px;
+	padding-top: 10px;
+	font-size: small;
+	word-wrap: break-word;
+	word-break: break-all;
+	position: relative;
+}
+.StatusRControl
+{
+	bottom: 0px;
+	margin-left:70px;
+	padding-top: 9px;
+	padding-bottom:9px;
+	text-align:left;
+	position: relative;
+}
+.StatusRReply
+{
+	position:absolute;
+	right:2px;	
+	color: rgb(255,96,0);
+	font-family: "微软雅黑";
+	font-size: small;
+	display:none;
+}
+.StatusRReply:hover
+{
+	text-decoration: underline;
+	cursor: hand;
+}
+.StatusRText
+{
+	margin: 7px 10px 5px 10px;
+}
+.StatusRTime
+{
+	font-size: 90%;
+	color: rgb(214,164,80);
+}
+.StatusRBox
+{
+	margin-right:0px;
+	margin-top: 3px;
+	border-bottom: solid 1px;
+	border-color: #CDAD00;	
+}
+.StatusRBText
+{
+	width:100%;
+	margin-right:0px;
+}
+.StatusRBControl
+{
+	text-align:right;
+}
+.StatusTime
+{
+	color: rgb(214,164,80);
+	font-size: small;
+	font-family: "微软雅黑";
+}
+.StatusLocation
+{
+	color: rgb(214,164,80);
+	font-size: small;
+	font-family: "微软雅黑";
+}
+
+.Title
+{
+	color: rgb(189,123,24);
+	font-size : small;
+	font-family: "微软雅黑";
+	font-weight: bold;
+/*	padding-bottom: 20px;*/
+}
+#UIwait
+{
+	width:100px;
+	height:100px;
+	position:fixed;
+	text-align:center;
+	top:300px;
+	left:50%;
+	margin-left:-50px;
+	color:#BD7B18;
+}

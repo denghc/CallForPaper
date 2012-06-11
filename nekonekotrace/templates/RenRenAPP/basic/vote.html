@@ -1,0 +1,28 @@
+<div class="StatusBody">
+    <div class='StatusHead'>
+        <img class='StatusHeadImg' src="<%= headurl %>"></img>
+    </div>
+    <div class='StatusContent StatusML'>
+        <a class='StatusName'><%= name %></a><p />
+        <%= title %>
+        <div>Vote Image Here?</div>
+        <%= content %>
+    </div>
+    <div class='StatusControl StatusML'>
+        <span class='StatusTime'><%= time %></span>
+        <span class='StatusLocation'><%= endtime %></span>
+        <span class='StatusTrans'>Transmit(<%= tnum %>)</span>
+        <span class='StatusReply' onclick="thumiao.RRAppUIBasic.replys('v',<%= id %>)">Reply(<%= cnum %>)</span>
+    </div>
+    <div id= "vote_<%= id %>" class="StatusRBox StatusML">
+        <div >
+            <textarea id="vote_c<%= id %>" class='StatusRBText'>
+            </textarea>
+        </div>
+        <div class='StatusRBcontrol'>
+            <span onclick="thumiao.RRAppUIBasic.reply('v',<%= id %>)">summit</span>
+        </div>
+    </div>
+    <div id="vote_r<%= id %>" class="StatusReplyList StatusML">
+    </div>  
+</div>

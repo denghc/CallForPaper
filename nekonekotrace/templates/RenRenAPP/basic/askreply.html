@@ -1,0 +1,17 @@
+<div class="StatusRBody">
+    <div class='StatusRHead'>
+        <img class='StatusRHeadImg' src="<%= headurl %>"></img>
+    </div>
+    <div class='StatusRContent'>
+        <a class='StatusRName'><%= name %>：</a><%= content %>
+    </div>
+    <div class='StatusRControl'>
+        <span class='StatusRTime'><%= time %></span>
+        <span id="ask_rs<%= id %>" canvas="<%= canvas %>"</span>
+        <script>
+        	thumiao.RRAppUIBasic.initARS(<%= id %>,<%= score %>,<%= userid %>);
+        </script>
+        <span class='StatusRReply' onclick="thumiao.RRAppUIBasic.setRto('a',<%= id %>)" >回复</span>
+        <span class='StatusRReply' onclick="thumiao.RRAppUIBasic.setRto('a',<%= id %>)" >显示绘图</span>
+    </div>
+</div>

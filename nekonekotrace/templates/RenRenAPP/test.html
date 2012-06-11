@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title>Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
+    <script type='text/javascript'>
+    	$(document).ready(function(){
+			//$('#MapPanel').hide();
+		});
+    </script>
+	<link rel="stylesheet" href="../../static/css/rrapphome.css">
+</head>
+<body>
+<div id="Biggest">
+    <!-- Bar divs here -->
+    <div id="BarManager">
+    	<div id='BarImage'>
+    	</div>
+    	<div id='BarUpUp'></div>
+    	<div id='BarUp'>
+            <a id='NewsBar1' class="BarMbutton" onclick="thumiao.RRAppUIBasic.buttonNews()">新鲜事</a>
+            <a class="BarMButBar"></a>
+            <a id='NewsBar5' class="BarMbutton" onclick="thumiao.RRAppUIBasic.buttonCat()">查看猫</a>
+            <a class="BarMButBar"></a>
+            <a id='NewsBar6' class="BarMbutton" onclick="thumiao.RRAppUIBasic.buttonUser()">查看我自己</a>
+            <a class="BarMButBar"></a>
+            <a id='NewsBar4' class="BarMbutton" onclick="thumiao.RRAppUIBasic.buttonMap()">新鲜事地图</a>
+        </div>
+        <div id='BarDown'>
+            <a id='NewsBar2' class="BarMbutton" onclick="thumiao.RRAppUIBasic.buttonMiao()">猫有话说</a>
+            <a class="BarMButBar"></a>
+            <a id='NewsBar3' class="BarMbutton" onclick="thumiao.RRAppUIBasic.buttonHehe()">我也有话说</a>
+        </div>          
+    </div>
+    <!-- Panel divs here -->
+    <div id="PanelManager" class='PanelM'>
+        <div class="Bar" id='BarTakePlace'>
+
+        </div>
+        <!-- Panel for news list -->
+        <div id="NewsPanel">
+            <div id='NewsN0'>
+                <span class ='NewsSpan' onclick="thumiao.news.all0()">有新鲜事，点击查看</span>
+            </div>
+            <div id="NewsList">
+            	
+            </div>
+            <div id='NewsN1'>
+                <span class ='NewsSpan' onclick="thumiao.news.all1()">更多新鲜事...</span>
+            </div>
+        </div>
+        <!-- Panel for new news -->
+		<div id="NewNews">
+        	<!-- Panel for cat selection -->
+	        <div id="NewsCatPanel" class="NewNewsFloat">
+	        	<div>Please choose a cat</div>
+	        	<div class='NewNewsClose' onclick="thumiao.RRAppUIBasic.nnclose()"> X </div>
+				<div id="NewsCatList">
+					<!-- feed cat list here -->
+				</div>
+	        </div>
+	        <!-- Panel for input news content -->
+	        <div id="NewsContentPanel" class="NewNewsFloat">
+	        	<div class='NewNewsClose'onclick="thumiao.RRAppUIBasic.nnclose()"> X </div>
+	            <div class="demo-box">
+	                <input id="file_upload" type="file" name="Filedata">
+	                <div id="file_uploadQueue" class="uploadifyQueue"></div>
+	                <div id = "uploadbutton" style="display: none">
+	                    <p><a href="javascript:$('#file_upload').uploadifyUpload()">上传图片</a>
+	                        <a href="javascript:$('#file_upload').uploadifyClearQueue()">取消上传</a>
+	                    </p>
+	                </div>
+	                <p><span id="id_span_msg"></span></p>
+	            </div>
+	            <div>
+	            	<form enctype="multipart/form-data">
+						<input id="the-file" name="file" type="file" onchange="thumiao.RRAppUIBasic.fileSelect()"/>
+						<a id = "the-file-info"></a>
+						<input id="the-file-up" type="button" value="Upload" />
+					</form>
+					<progress></progress>
+	            </div>
+                <div class="input">
+                    <textarea id='NewsContent'></textarea>
+                </div>
+                <div id='NewsCtoL' onclick="thumiao.RRAppUIBasic.setLocation()">Select Location
+                </div>
+                <div id='NewsCommit' onclick='thumiao.RRAppUIBasic.commit()'>OK</div>
+	        </div>
+	        <!-- Panel for locatioin selection and add -->
+	        <div id="NewsLocationPanel" class="NewNewsFloat">
+	            <div class='NewNewsClose'onclick="thumiao.RRAppUIBasic.nnclose()"> X </div>
+	            <div onclick="thumiao.RRAppUIBasic.backContent()">select done</div>
+	            <div id="NewsLocationMap" ></div>
+	            <div >
+	                <input id="NLname" type="text"/><p/>
+	                <input id="NLx" type="text"/>
+	                <input id="NLy" type="text"/><p/>
+	                <input id="NLsubmit" type="button" value="Submit" onclick="thumiao.RRAppUIBasic.newF()"/>
+	            </div>
+	        </div>
+        </div>
+        <!-- Panel for map list-->
+    	<div id="MapPanel">
+    		<div id='MapPBody'>
+    			<div id="MapPClose" onclick="thumiao.RRAppUIBasic.mapPclose()">X</div>
+    			<div id="MapFilter">
+    				<a >test</a>
+    			</div>
+    			<div id="MapNewsList"></div>
+    		</div>
+    	</div>			
+    </div>
+</div>
+</body>
+</html>

@@ -54,7 +54,7 @@ def jsonAskByTargetID(photo,newsid=-1,newstype=-1):
     result['userid'] = userinfo.id
     result['headurl'] = userinfo.URL
     result['name'] = userinfo.Name
-    result['content'] = photo.Remark
+    result['remark'] = photo.Remark
     result['tnum'] = photo.Transmit_num
     result['cnum'] = photo.Comment_num
     result['time'] = photo.Time.strftime('%Y-%m-%d %H:%M:%S')

@@ -1,0 +1,38 @@
+<dl class="feed_list W_linecolor">
+    <dt class="face">
+    	<a ><img width="50" height="50" src="<%= headurl %>" /></a>
+    </dt>
+    <dd class="content">
+	    <a class="W_blkarrow W_bglinka" action-data="">X</a>
+	    <p ><a><%= name %></a>：<em><%= remark %></em></p>
+	    <ul class="piclist" style="display: none;">
+	    	<li>
+	    		<div class="chePicMin W_bgcolor_mini bigcursor">
+	              <img class="bigcursor" />
+	              <img class="loading_gif" style="margin: 25px 52px 25px -68px; display: none;" />
+	            </div>
+	        </li>
+	    </ul>
+	    <dl class="comment W_textc W_linecolor W_bgcolor">
+	    	<dd class="expand">
+	            <p class="W_no_border">
+	            	<a class="retract" >收起</a>
+	            </p>
+	            <div  class="smallcursor">
+	                <img src="<%= imageurl %>" width="160" height="160" />
+	            </div>
+	        </dd>
+	    </dl>
+	    <p class="info W_linkb W_textb">
+		    <span>
+		    	<a onclick = "thumiao.photo.transfer(<%= photo %>)">转发<%= tnum %></a>
+		        <i class="W_vline">|</i>
+             	<a onclick = "thumiao.photo.replys(<%= photo %>)">评论(<%= cnum %>)</a>
+		    </span>
+		    <a class="date" > <%= time %> </a>
+		    <br /> 在<a href=""><%= location %></a>
+	    </p>
+        <div id= "photo_<%= photo %>" style="display:none;"></div>
+    </dd>
+    <dd class="clear"></dd>
+</dl>

@@ -1,0 +1,22 @@
+.Bar{
+	height:30px;
+}
+.BarM{
+}
+.Panel{
+	
+}
+.PanelM{
+	
+}
+html{
+	
+}
+#photo_content .help_text {
+    margin-top:8px;
+}
+#photo_content {
+    clear:both;
+    margin:25px 0 0 0;
+    padding:0 15px 0 0;
+}

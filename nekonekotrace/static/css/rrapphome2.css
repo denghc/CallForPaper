@@ -1,0 +1,122 @@
+/*
+Cat info
+*/
+#CatInfoPanel
+{
+	z-index:10;
+	position:fixed;
+	top:100px;
+	left:0px;
+	width:100%;
+	height:100%;	
+}
+#CICatViewPanel
+{
+	
+}
+#CICatViewPContent
+{
+	margin-left: 65px;
+}
+#CICatViewPhead
+{
+	position:absolute;
+	top:10px;
+	left:10px;
+}
+#CICatViewPimg
+{
+	width:50px;
+	height:50px;
+}
+.CICatViewPback
+{
+	text-align:left;
+}
+.CatInfoFloat
+{
+	width:350px;
+	margin:0 auto;
+	background-color: orange;
+	position:relative;
+}
+.CatInfoClose
+{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+#CICatMapList
+{
+	width:500px;
+	height:400px;
+}
+#CICatData1
+{
+	height:200px;
+}
+#CICatData2
+{
+	height:200px;
+}
+/*
+small div 
+*/
+.SmallBody
+{
+	position:relative;
+	
+}
+.SmallContent
+{
+	margin-left:35px;
+}
+.SmallHead
+{
+	position:absolute;
+	top:2px;
+	left:2px;
+}
+.SmallImg
+{
+	width:30px;
+	height:30px;
+}
+#SmallSPanel
+{
+	position:fixed;
+	width:100%;
+	top:100px;
+	height: 400px;
+	z-index:20;
+}
+#SmallSbody
+{
+	margin:0 auto;
+	width:600px;
+	background-color:#0099FF;
+}
+#SmallSclose
+{
+	text-align:right;
+}
+#SmallScontent
+{
+	margin-top:20px;
+}
+/*
+ Photo
+ */
+.PhotoSimg
+{
+	width:350px;
+}
+#NNFileimg
+{
+	width:200px;
+	margin:0 auto;
+}
+.anchorBL
+{
+	display:none;
+}

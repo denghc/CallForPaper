@@ -1,0 +1,30 @@
+<div class="repeat W_textc W_linecolor W_bgcolor">
+    <div class="arrow W_bgcolor_arrow">
+        <em class="W_arrline"></em>
+        <span></span>
+    </div>
+    <!-- 评论框 -->
+    <div class="input clearfix">
+        <div>
+            <textarea style="margin: 0px 0px 3px; padding: 4px 4px 0px; border-color: rgb(198, 198, 198); border-style: solid; border-width: 1px; font-size: 12px; font-family: Tahoma,宋体; word-wrap: break-word; line-height: 18px; overflow: hidden; outline: medium none; height: 20px;" id="photocomment_<%= id %>"></textarea>
+        </div>
+        <div class="action clearfix">
+            <span class="faces"></span>
+        </div>
+        <p class="btn">
+            <a class="W_btn_b btn_noloading">
+				<span onclick="thumiao.photo.reply(<%= id %>)">
+					<b class="loading"></b>
+					<em>评论</em>
+				</span>
+            </a>
+        </p>
+    </div>
+    <!-- /评论框 -->
+    <!-- 已有评论列表 -->
+    <div class="comment_lists">
+        <div id="photo_c<%= id %>"></div>
+        <p class="more W_linecolor" style="display:none;">后面还有评论，<a>点击查看<span class="CH">&gt;&gt;</span></a></p>
+    </div>
+    <!-- /已有评论列表 -->
+</div>

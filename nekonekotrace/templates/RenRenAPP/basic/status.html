@@ -1,0 +1,42 @@
+<div class="Status">
+    <div>
+        <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+        <div class="StatusBody">
+            <div class='StatusHead'>
+                <img class='StatusHeadImg' src="<%= headurl %>"></img>
+            </div>
+            <div class='StatusContent StatusML'>
+                <div>
+                    <a class='StatusName Content'><%= name %></a>
+                </div>
+                <div class= "Content"><%= content %></div>
+            </div>
+            <div class='StatusControl StatusML'>
+                <span class='StatusTime'><%= time %></span>
+                <span class='StatusLocation'>来自：<%= locationname %></span>
+                <div class="StatusInner">
+                    <!--span class='StatusTrans'>转发(<%= tnum %>)</span-->
+                    <span id="status_rn<%= id %>" class='StatusReply' onClick="thumiao.RRAppUIBasic.replys('s',<%= id %>)">回复(<%= cnum %>)</span>
+                </div>
+            </div>
+        </div>
+        <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+    </div>
+    <div id= "status_<%= id %>" class="StatusRList">
+        <div class="StatusReplyList StatusML">
+            <div class="StatusRBox StatusML">
+                <div class= "StatusRText">
+                    <textarea id="status_c<%= id %>" class='StatusRBText'></textarea>
+                </div>
+                <div class='StatusRBcontrol'>
+                    <div align="right">
+                        <span style="color:#FF6000;" onClick="thumiao.RRAppUIBasic.reply('s',<%= id %>)">回复</span>
+                    </div>
+                </div>
+            </div>
+            <div id="status_r<%= id %>">
+                <!-- Add Replys Here -->
+            </div>
+        </div>
+    </div>
+</div>

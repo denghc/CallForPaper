@@ -16,16 +16,16 @@ from nekonekotrace.models import *
 def jsonNoticeByTargetID(status, newsid = -1, newstype = -1):
     #userinfo = status.UserID
     ret = {}
-    ret['newsid'] = newsid
-    ret['newstype'] = newstype
+    #ret['newsid'] = newsid
+    #ret['newstype'] = newstype
     #cat = status.CatID
-    ret['name'] = '系统管理员'#cat.Name
-    ret['headurl'] = '../../static/phonesencha/callforpaper.png'#cat.cat_image
+    #ret['name'] = cat.Name
+    #ret['headurl'] = cat.cat_image
     ret['content'] = status.Content
     ret['title'] = status.Title
-    ret['tnum'] = status.Transmit_num
+    #ret['tnum'] = status.Transmit_num
     ret['id'] = status.id
-    ret['cnum'] = status.Comment_num
+    #ret['cnum'] = status.Comment_num
     ret['time'] = status.Time.strftime('%Y-%m-%d %H:%M:%S')
     return ret
 

@@ -1,0 +1,48 @@
+<div class="Status">
+    <div>
+        <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+        <div class="StatusBody">
+            <div class='StatusHead'>
+                <img class='StatusHeadImg' src="<%= headurl %>"></img>
+            </div>
+            <div class='StatusContent StatusML'>
+                <a class='StatusName'><%= name %></a>
+                <div class="Content"><%= title %></div>
+                <p/>
+                <div style="width:100%;text-align: center;">
+                	<img onclick="" id= "photo_p<%= id %>" class='PhotoSimg' src="../../static/rrapp/waiting.gif"></img>
+                	<script>
+                		thumiao.RRAppUIBasic.adjustP('#photo_p<%= id %>','<%= imageurl %>');
+                	</script>
+                </div>
+                <p class="Content" style="margin-top: 1px;"><%= remark %></p>
+            </div>
+            <div class='StatusControl StatusML'>
+                <span class='StatusTime'><%= time %></span>
+                <span class='StatusLocation'>来自：<%= locationname %></span>
+                <div class="StatusInner">
+                    <!--span class='StatusTrans'>转发(<%= tnum %>)</span-->
+                    <span id="photo_rn<%= id %>" class='StatusReply' onclick="thumiao.RRAppUIBasic.replys('p',<%= id %>)">回复(<%= cnum %>)</span>
+                </div>
+            </div>
+        </div>
+        <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+    </div>
+    <div id= "photo_<%= id %>" class="StatusRList">
+        <div class="StatusReplyList StatusML">
+            <div class="StatusRBox StatusML">
+                <div class= "StatusRText">
+                    <textarea id="photo_c<%= id %>" class='StatusRBText'></textarea>
+                </div>
+                <div class='StatusRBcontrol'>
+                    <div align="right">
+                        <span style="color:#FF6000;" onClick="thumiao.RRAppUIBasic.reply('p',<%= id %>)">回复</span>
+                    </div>
+                </div>
+            </div>
+            <div id="photo_r<%= id %>">
+                <!-- add replys here -->
+            </div>
+        </div>
+    </div>
+</div>

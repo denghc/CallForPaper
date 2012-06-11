@@ -5,7 +5,7 @@ function ThuMiao(){
     this.userImg;
     this.userType;
     this.userTime;
-	this.webBase = "http://127.0.0.1:8000/";//"../../";//
+	this.webBase = "http://59.66.139.165:8000/";//"../../";//
 	this.webSocket;
 	this.init = function(){
 		//init parameters
@@ -204,10 +204,10 @@ ThuMiao.prototype.news = new function(){
 		}
 	}
 	this.all0 = function(){
-		this.all(this.maxID,0,5);
+		this.all(this.maxID,0,3);
 	}
 	this.all1 = function(){
-		this.all(this.minID,1,5);
+		this.all(this.minID,1,3);
 	}
 	function allCall(result,type,id,num){
 		if(result == 'Error'){

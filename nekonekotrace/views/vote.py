@@ -17,8 +17,6 @@ def jsonVoteByTargetID(status, newsid = -1, newstype = -1):
     ret = {}
     ret['newsid'] = newsid
     ret['newstype'] = newstype
-    ret['name'] = userinfo.Name
-    ret['headurl'] = userinfo.URL
     cat = status.CatID
     if cat != None:
         ret['name'] = cat.Name

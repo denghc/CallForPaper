@@ -1,0 +1,104 @@
+<div style="margin-left:10px; margin-right:10px;">
+    <!-- Bar divs here -->
+    <div id="BarManager" class="BarM newFilter W_texta">
+        <div id="NewsBar" class="Bar nfTagB_group nfTagB clearfix">
+            <ul>
+                <li id='NewsBar2' class="current"><span><em><a id='NewsBar21' class="W_texta" onclick="thumiao.PhoneUIbasic.buttonMiao()">Miao~</a></em></span></li>
+                <li id='NewsBar3' class="current"><span><em><a id='NewsBar31' class="W_texta" onclick="thumiao.PhoneUIbasic.buttonHehe()">Hehe.</a></em></span></li>
+            </ul>
+        </div>
+        <div id="NewsCatBar" class="Bar nfTagB_group nfTagB clearfix">
+            <ul>
+                <li id='NewsCatBar1' class="current"><span><em><a id='NewsCatBar11' class="" onclick="thumiao.PhoneUIbasic.buttonNews()">---Back</a></em></span></li>
+                <!--li id='NewsCatBar2' class="current"><span><em><a id='NewsCatBar21' class="" onclick="thumiao.buttonContent()">Next---</a></em></span></li-->
+            </ul>
+        </div>
+        <div id="NewsContentBar" class="Bar nfTagB_group nfTagB clearfix">
+            <ul>
+                <li id='NewsContentBar1' class="current"><span><em><a id='NewsContentBar11' class="" onclick="thumiao.PhoneUIbasic.buttonMiao()">---Back</a></em></span></li>
+                <li id='NewsContentBar2' class="current"><span><em><a id='NewsContentBar21' class="" onclick="thumiao.PhoneUIbasic.buttonLocation()">Location---</a></em></span></li>
+            </ul>
+        </div>
+        <div id="NewsLocationBar" class="Bar nfTagB_group nfTagB clearfix">
+            <ul>
+                <li id='NewsCatBar1' class="current"><span><em><a id='NewsCatBar11' class="" onclick="thumiao.PhoneUIbasic.buttonContent()">---Content</a></em></span></li>
+                <li id='NewsCatBar2' class="current"><span><em><a id='NewsCatBar21' class="" onclick="thumiao.PhoneUIbasic.newF()">Finish---</a></em></span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Panel divs here -->
+    <div id="PanelManager" class='PanelM'>
+        <!-- Panel for news list -->
+        <div id="NewsPanel" class="Panel">
+            <div id='NewsN0' class="feed_lists W_linka W_texta">
+                <a class="notes" onclick="thumiao.PhoneUIbasic.all0()">有新鲜事，点击查看</a>
+            </div>
+            <div id="NewsList">
+
+            </div>
+            <div id='NewsN1' class="feed_lists W_linka W_texta">
+                <div class="W_loading">
+                    <span onclick="thumiao.PhoneUIbasic.all1()">更多新鲜事...</span>
+                </div>
+            </div>
+        </div>
+        <!-- Panel for cat selection -->
+        <div id="NewsCatPanel" class="Panel">
+
+        </div>
+        <!-- Panel for input news content -->
+
+
+        <div id="NewsContentPanel" class="Panel">
+            <div class="demo-box">
+                <input id="file_upload" type="file" name="Filedata">
+                <div id="file_uploadQueue" class="uploadifyQueue"></div>
+                <div id = "uploadbutton" style="display: none">
+                    <p><a href="javascript:$('#file_upload').uploadifyUpload()">上传图片</a>
+                        <a href="javascript:$('#file_upload').uploadifyClearQueue()">取消上传</a>
+                    </p>
+                </div>
+                <p><span id="id_span_msg"></span></p>
+            </div>
+
+            <div class="send_weibo send_weibo_current" style="margin-left:10px; margin-right:10px;">
+                <div class="title"></div>
+                <!-- 可有可无的东西呃 -->
+                <div class="key W_textb" style="display: block;">
+                    <a>这里可以有什么文字么？</a>
+                    <a style="position:absolute;top:-1000px;"></a>
+                    <a style="position:absolute;top:-1000px;"></a>
+                </div>
+                <!-- /可有可无的东西呃 -->
+                <!-- 输入框 -->
+                <div class="input">
+                    <div class="top_border">
+                        <div class="bottom_border">
+                            <textarea id='NewsContent' style="height: 55px; margin: 0px; padding: 0px; border-color: rgb(0, 0, 0); border-style: none; border-width: 0px; font-size: 14px; font-family: Tahoma,宋体; word-wrap: break-word; line-height: 18px; overflow-y: auto; overflow-x: hidden; outline: medium none;" tabindex="1" range="0&amp;0"></textarea>
+                            <div style="display: none" class="send_succpic"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /输入框 -->
+                <div class="btn">
+                    <a class="disable" style="background-image:url(http://img1.t.sinajs.cn/t4/skin/skin027/images/btn_send.png?id=1331035235031); background-position:-140px 0"></a>
+                </div>
+                <div style="left: 0px; top: -5px; display: none; position: absolute; width: auto; padding-right: 20px;" class="layer_tips">
+                    <div></div>
+                    <a class="W_close_color"></a>
+                    <span class="arrow_down" style="left: 30px;"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Panel for locatioin selection and add -->
+        <div id="NewsLocationPanel" class="Panel">
+            <div id="NewsLocationMap" style="width:250px;height:340px;border:1px solid gray"></div>
+            <div >
+                <input id="NLname" type="text"/><p/>
+                <input id="NLx" type="text"/>
+                <input id="NLy" type="text"/><p/>
+                <input id="NLsubmit" type="button" value="Submit" onclick="thumiao.PhoneUIbasic.newL()"/>
+            </div>
+        </div>
+    </div>
+</div>

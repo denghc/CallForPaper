@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>post_Test</title>
+  </head>
+
+<body>
+	<p> post hello world</p>
+	<form action="http://101.5.184.189:8080/post/test/" method="post">
+  		<p>First name: <input type="text" name="context" /></p>
+  		<p>Last name: <input type="text" name="context2" /></p>
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<p> post cat impressoin</p>
+	<form action="http://101.5.184.189:8080/post/catimpression/" method="post">
+  		<p>CatID: <input type="text" name="catid" /></p>
+  		<p>AuthorID: <input type="text" name="userid" /></p>
+  		<p>Content: <input type="text" name="content" /></p>
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<p> post cat locationinfo</p>
+	<form action="http://101.5.184.189:8080/post/locationinfo/" method="post">
+  		<p>CatID: <input type="text" name="catid" /></p>
+  		<p>LocationID: <input type="text" name="location" /></p>
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<p> post treat</p>
+	<form action="http://101.5.184.189:8080/post/treat/" method="post">
+  		<p>CatID: <input type="text" name="catid" /></p>
+  		<p>User ID: <input type="text" name="user" /></p>
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<p> post pic</p>
+	<form method="POST" action="http://101.5.184.189:8080/post/catpic/" enctype="multipart/form-data" name="form">
+		<p>选择文件： <input type="file" name="filename" /><br></p>
+		<p>CatID: <input type="text" name="catid" /></p>
+  		<p>User ID: <input type="text" name="userid" /></p>
+		<input type="submit" value="上传">
+	</form>
+</body>
+</html>

@@ -13,8 +13,6 @@ from nekonekotrace.views.status import *
 from nekonekotrace.views.photo import *
 from nekonekotrace.views.catdata import *
 from nekonekotrace.views.ask import *
-from nekonekotrace.views.vote import *
-from nekonekotrace.views.notice import *
 
 def getNewsListByID(newsid , upordown, num):
     # upordown  0 id++ , 1 id--
@@ -34,22 +32,14 @@ def jsonNewsList(newslist,isCat = False):
         idc = item.id
         if isCat == True:
             idc = item.NewsID
-        if item.Type == 0:
-            photo = Photo.objects.get(id = item.TargetID)
-            if photo.Deleted == 0:
-                result.append(jsonPhotoByTargetID(photo, idc, item.Type))
-        elif item.Type == 1:
+        if item.Type == 1:
             status = Status.objects.get(id = item.TargetID)
             if status.Deleted == 0:
                 result.append(jsonStatusByTargetID(status, idc, item.Type))
-        elif item.Type == 2:
-            photo = Notice.objects.get(id = item.TargetID)
+        elif item.Type == 0:
+            photo = Photo.objects.get(id = item.TargetID)
             if photo.Deleted == 0:
-                result.append(jsonNoticeByTargetID(photo, idc, item.Type))
-        elif item.Type == 3:
-            data = Vote.objects.get(id = item.TargetID)
-            if data.Deleted == 0:
-                result.append(jsonVoteByTargetID(data, idc, item.Type))
+                result.append(jsonPhotoByTargetID(photo, idc, item.Type))
         elif item.Type == 4:
             data = CatData.objects.get(id = item.TargetID)
             if data.Deleted == 0:

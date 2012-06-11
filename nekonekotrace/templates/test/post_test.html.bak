@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>post_Test</title>
+  </head>
+
+<body>
+	<p> post hello world</p>
+	<form action="http://59.66.139.170:8080/post/test/" method="post">
+  		<p>First name: <input type="text" name="context" /></p>
+  		<p>Last name: <input type="text" name="context2" /></p>
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<p> post cat impressoin</p>
+	<form action="http://192.168.1.102:8080/post/catimpression/" method="post">
+  		<p>CatID: <input type="text" name="catid" /></p>
+  		<p>AuthorID: <input type="text" name="userid" /></p>
+  		<p>Content: <input type="text" name="content" /></p>
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<div id="Biggest">
+	<!-- Bar divs here -->
+	<div id="BarManager">
+		<!--<div id='BarImage'></div> -->
+		<div id='BarUpUp'></div>
+		<div id='BarUp'>
+			<a id='NewsBar01' class="BarMbuttonUp" onClick="thumiao.RRAppUIBasic.buttonNews()">新鲜事</a>
+			<a class="BarMButBar"></a>
+			<a id='NewsBar02' class="BarMbuttonUp" onClick="thumiao.RRAppUIBasic.buttonCat()">所有猫</a>
+			<a class="BarMButBar"></a>
+			<a id='NewsBar03' class="BarMbuttonUp" onClick="thumiao.RRAppUIBasic.buttonUser()">查看我自己</a>
+			<a class="BarMButBar"></a>
+			<a id='NewsBar04' class="BarMbuttonUp" onClick="thumiao.RRAppUIBasic.buttonMap()">新鲜事地图</a>
+		</div>
+		<div id='BarDown'>
+			<a id='NewsBar1' class="BarMbuttonDown" onClick="thumiao.RRAppUIBasic.buttonMiao()">发状态</a>
+			<a class="BarMButBar"></a>
+			<a id='NewsBar2' class="BarMbuttonDown" onClick="thumiao.RRAppUIBasic.buttonPhoto()">发照片</a>
+			<a class="BarMButBar"></a>
+			<a id='NewsBar3' class="BarMbuttonDown" onClick="thumiao.RRAppUIBasic.buttonData()">发数据</a>
+			<a class="BarMButBar"></a>
+			<a id='NewsBar4' class="BarMbuttonDown" onClick="thumiao.RRAppUIBasic.buttonAsk()">发问题</a>
+		</div>
+	</div>
+	<!-- Panel divs here -->
+	<div id="PanelManager" class='PanelM'>
+		<div class="Bar" id='BarTakePlace'>
+			<div class="OwnerInfoBar">
+				<img class='OwnerHeadImg' src="<%= headurl %>"></img><br/>
+				<span><%= name %></span>
+			</div>
+		</div>
+		<!-- Panel for news list -->
+		<div id="NewsPanel">
+			<div id='NewsN0' class="NewsBar">
+				<span class ='NewsSpan' onClick="thumiao.news.all0()">有新鲜事，点击查看</span>
+			</div>
+			<div id="NewsList">
+				<!-- add news here -->
+			</div>
+			<div id='NewsN1' class="NewsBar">
+				<span class ='NewsSpan' onClick="thumiao.news.all1()">更多新鲜事</span>
+			</div>
+		</div>
+		<!-- Panel for new news -->
+		<div id="NewNews">
+			<!-- Panel for cat selection -->
+			<div id="NewsCatPanel" class="NewNewsFloat">
+				<div>
+					请选择：
+				</div>
+				<div class='CloseButton' onClick="thumiao.RRAppUIBasic.nnclose()"></div>
+				<div id="NewsCatList">
+					<!-- feed cat list here -->
+				</div>
+				<div id="NewNewsRendiv" class='NewsCatBody'>
+					<img class='NewsCatHead' src="<%= headurl %>"></img>
+					<div class='NewsCatName'><%= name %></div>
+					<div class='NewsCatStatus'>我以地球人的身份发布~</div>
+					<div class='NewsCatSelect' onclick="thumiao.RRAppUIBasic.setCat(-1)"></div>
+				</div>
+			</div>
+			<!-- Panel for input news content -->
+			<div id="NewsContentPanel" class="NewNewsFloat">
+				<div class='CloseButton'onclick="thumiao.RRAppUIBasic.nnclose()"></div>
+				<div id="NewNewsPdiv">
+					<form enctype="multipart/form-data">
+						<input id="NNFile" name="file" type="file" onChange="thumiao.RRAppUIBasic.showLocalImage('n')" accept="image/*"/>
+					</form>
+					<div id="NewPreviewPD">
+						<img id="NewPreviewPhoto" src="" onload="thumiao.RRAppUIBasic.adjustImg('#NewPreviewPhoto',100,100);"><img/>
+					</div>
+					<div class= "NewsInput input">
+						<label class="ContentLabel NewContentLabel" >标题：</label>
+						<input id= "NewTitle" type="text" />
+					</div>
+				</div>
+				<div id="NewNewsSdiv">
+					<div class= "NewsInput input">
+						<label class="ContentLabel NewContentLabel" style="margin-left: -50px; position: absolute">内容：</label>
+						<textarea id='NewsContent'></textarea>
+					</div>
+				</div>
+				<div id="NewNewsTdiv">
+					<div class= "NewsInput input">
+						<label class="ContentLabel NewContentLabel" style="margin-left: -50px; position: absolute">标签：</label>
+						<input id= "NewTag" type="text" />
+						<input id="NTsubmit" type="button" value="新增" onClick="thumiao.RRAppUIBasic.nnNewT()"/>
+						<div id="NNTagList">
+						
+						</div>
+					</div>
+				</div>
+				<div id="NewsPD">
+					<div id ="NewsPDTitle" class="Title">请输入猫的数据：</div>
+					<label class="ContentLabel">体重：</label><input id="NewDataW" class="NewsPublishData" type="text"/><label class="ContentLabel2">克</label><br>
+					<label class="ContentLabel">身长：</label><input id="NewDataL" class="NewsPublishData" type="text"/><label class="ContentLabel2">毫米</label><br>
+					<label class="ContentLabel">健康：</label><input id="NewDataH" class="NewsPublishData" type="text" />
+				</div>
+				<div id='NewsCtoL' class="StatusReply" onClick="thumiao.RRAppUIBasic.setLocation()">
+					选择地点
+				</div>
+				<div id='NewsCommit' class="StatusReply" onclick='thumiao.RRAppUIBasic.commit()'>
+					确定
+				</div>
+			</div>
+			<!-- Panel for locatioin selection and add -->
+			<div id="NewsLocationPanel" class="NewNewsFloat">
+				<div class='CloseButton'onclick="thumiao.RRAppUIBasic.nnclose()"></div>
+				<div id="StatusReplyFSL" style="width: 80%; margin-left: 20px" class="StatusReply" onClick="thumiao.RRAppUIBasic.backContent()">
+					完成选择
+				</div>
+				<div id="NewsLocationMap" ></div>
+				<div>
+					<p class="InputStyle">
+						<label style="color:#FF6000;">地点名称：</label>
+						<input id="NLname" type="text"/>
+						<input id="NLsubmit" type="button" value="新增" onClick="thumiao.RRAppUIBasic.nnNewL()"/>
+					</p>
+					<p style="margin: 2px; text-align: center"></p>
+				</div>
+			</div>
+		</div>
+		<!-- Panel for map list-->
+		<div id="MapPanel">
+			<div id='MapPBody'>
+				<div class="CloseButton" onClick="thumiao.RRAppUIBasic.mapPclose()"></div>
+				<div id="MapFilter">
+					<label class="ContentLabel NewContentLabel" >新鲜事地图</label>
+				</div>
+				<div id='MapNewsList'></div>
+			</div>
+		</div>
+		<!-- Panel for cat -->
+		<div id="CatInfoPanel">
+			<!-- Panel for cat selection -->
+			<div id="CICatPanel" class="CatInfoFloat">
+				<div class="Title">
+					请选一只猫
+				</div>
+				<div class='CloseButton' onclick="thumiao.RRAppUIBasic.ciclose()"></div>
+				<div id="CICatList">
+					<!-- feed cat list here -->
+				</div>
+				<div class='NewsCatBody'>
+					<img class='NewsCatHead' src="../../static/rrapp/addBtn_07.png"></img>
+					<div class='NewsCatName'>
+						新猫
+					</div>
+					<div class='NewsCatStatus'>
+						我从喵星来~请地球的各位多多指教~
+					</div>
+					<div class='NewsCatSelect' onclick="thumiao.RRAppUIBasic.newCat()"></div>
+				</div>
+			</div>
+			<!-- Panel for view -->
+			<div id="CICatViewPanel" class="CatInfoFloat">
+				<div class='CloseButton' onclick="thumiao.RRAppUIBasic.ciclose()"></div>
+				<div id="CICatViewPhead">
+					<img id='CICatViewPimg'></img>
+				</div>
+				<div id="CICatViewPContent">
+					<form enctype="multipart/form-data">
+						<input  onchange="thumiao.RRAppUIBasic.showLocalImage('c')" id="CICatNFile" name="choose file" type="file" accept="image/*"/>
+					</form>
+					<p class="ModifyInfoStyle">
+						姓名：<a id="CICatName"></a>
+						<input id="CICatNName" type="input"/>
+					</p>
+					<p id="CICatSex" class="ModifyInfoStyle">
+						性别：
+					</p>
+					<form id="CICatSexF" style="text-align: center; display: inline">
+						<input type="radio" id="radioM" name="sex" value ="male">
+						公猫
+						<input type="radio" id="radioF" name="sex" value ="female">
+						母猫
+						<input type="radio" id="radioU" name="sex" value ="unknown">
+						未知
+					</form>
+					<p class="ModifyInfoStyle">
+						介绍: <a id="CICatIntro"></a>								
+						<textarea id="CICatNIntro"></textarea>
+					</p>
+					<a  class='CICatButton' id="CInfoMap" onclick='thumiao.RRAppUIBasic.CICatMap()'>查看分布</a>
+					<a  class='CICatButton' id="CInfoData" onclick='thumiao.RRAppUIBasic.CICatData()'>查看数据</a>
+				</div>
+				<div class='CICatViewPback'>
+					<a id="CICatN" class="ReplyBtn" onclick='thumiao.RRAppUIBasic.newCatF()'>新增</a>
+					<a id="CICatM" class="ReplyBtn" onclick='thumiao.RRAppUIBasic.modifyCat()'>修改</a>
+					<a class="ReplyBtn" onclick='thumiao.RRAppUIBasic.backSelect()'>返回</a>
+				</div>
+			</div>
+			<!-- Panel for map -->
+			<div id="CICatMapPanel" class="CatInfoFloat">
+				<div  id= "CICatMapTitle" class="Title">
+					看看我都做了些什么
+				</div>
+				<div class='CloseButton' onclick="thumiao.RRAppUIBasic.backCatInfo()"></div>
+				<div id="CICatMapList"></div>
+				<div class='CICatViewPback'>
+					<a class="ReplyBtn" onclick='thumiao.RRAppUIBasic.backCatInfo()'>返回</a>
+				</div>
+			</div>
+			<!-- Panel for data -->
+			<div id="CICatDataPanel" class="CatInfoFloat">
+				<div  id= "CICatDataTitle" class="Title">
+					看看我的数据统计
+				</div>
+				<div class='CloseButton' onclick="thumiao.RRAppUIBasic.backCatInfo()"></div>
+				<div class='CICatDatas'>
+					<div class="CICatDataStr">请为我添加更多的数据~</div>
+					<div id="CICatData0"></div>
+				</div>
+				<div class='CICatDatas'>
+					<div class="CICatDataStr">请为我添加更多的数据~</div>
+					<div id="CICatData1"></div>
+				</div>
+				<div class='CICatViewPback'>
+					<a class="ReplyBtn" onclick='thumiao.RRAppUIBasic.backCatInfo()'>返回</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Panel for pop show -->
+<div id="SmallSPanel">
+	<div id='SmallSbody'>
+		<div style="background-color: #FFC150; opacity: 0.8">
+			<div id='SmallSclose' class="CloseButton" onclick='thumiao.RRAppUIBasic.smallSclose()'></div>
+		</div>
+		<div id='SmallScontent'>
+			<!-- Add News Here -->
+		</div>
+	</div>
+</div>
+<!-- div for canvas -->
+<div id="CanvasControl">
+	<div id="CanvasTitle">工具箱</div>
+	<div id="CanvasColors"></div>
+	<input type='text' id="CanvasColorS" onchange="thumiao.RRAppUIBasic.colorOnChange()"/>
+	<div id="CanvasColorShow" class="CanvasColor" style="top:64px;right:0px"></div>
+	<div id="CanvasWidths"></div>
+	<input type='text' id="CanvasWidthS" onchange="thumiao.RRAppUIBasic.widthOnChange()"/>
+	<div id="CanvasWidthShow" class="CanvasColor" style="top:100px;right:0px"></div>
+	<div class="CanvasClear" onclick="thumiao.RRAppUIBasic.undoCanvas()">撤销</div>
+	<div class="CanvasClear" onclick="thumiao.RRAppUIBasic.clearCanvas()">清除画布</div>
+	<div class="CanvasClear" onclick="thumiao.RRAppUIBasic.reCanvas()">绘制全部回复</div>
+</div>
+<script>
+	var temp = parseInt(document.body.clientWidth);
+	temp -= 750;
+	temp /= 2;
+	temp += 12;
+	$('#CanvasControl').css('left',temp);
+</script>
+<!-- div for holding -->
+<div id="Hold5" class="Hold"></div>
+<div id='Hold15' class="Hold"></div>
+<div id='Hold25' class="Hold">
+	<a class="BarMbuttonUp" id="Hold25s">请稍后。。。</a><br/>
+	<progress id='Hold25p' style="display:none;"></progress>
+</div>
